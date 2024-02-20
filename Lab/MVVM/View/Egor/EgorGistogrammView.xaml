@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Lab.MVVM.View.Egor.EgorGistogrammView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Lab.MVVM.View.Egor"
+             xmlns:viewModel="clr-namespace:Lab.MVVM.ViewModel.Egor"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.DataContext>
+        <viewModel:EgorGistogrammViewModel/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+        
+        <ItemsControl ItemsSource="{Binding HistogramData}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="21"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Black" BorderThickness="0.3">
+                        <Grid>
+                            <Rectangle Fill="#C99E32" Height="{Binding Frequency}"/>
+                            <TextBlock Text="{Binding Value, StringFormat={}{0:F2}}" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <Grid HorizontalAlignment="Center" Margin="0 50 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="300"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Математическое ожидание" FontSize="20"/>
+                    <TextBlock Text="Дисперсия" FontSize="20"/>
+                    <TextBlock Text="Дисперсия второго момента" FontSize="20"/>
+                    <TextBlock Text="Дисперсия третьего момента" FontSize="20"/>
+                </StackPanel>
+
+                <StackPanel Grid.Column="1">
+                    <TextBlock FontSize="20" Text="{Binding Mean}"/>
+                    <TextBlock FontSize="20" Text="{Binding Variance}"/>
+                    <TextBlock FontSize="20" Text="{Binding SecondMoment}"/>
+                    <TextBlock FontSize="20" Text="{Binding ThirdMoment}"/>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

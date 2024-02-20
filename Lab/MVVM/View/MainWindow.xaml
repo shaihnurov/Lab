@@ -30,12 +30,20 @@
                     VerticalAlignment="Center" MinWidth="500">
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Button Content="Ilnar" Width="50" Height="30"
-                            Command="{Binding IlnarViewCommand}" Style="{StaticResource ButtonStyle}"/>
-                    <Button Content="Egor" Margin="100 0 0 0" Width="50" Height="30"
-                            Style="{StaticResource ButtonStyle}"/>
-                    <Button Content="Kolyan" Margin="100 0 0 0" Width="50" Height="30"
-                            Style="{StaticResource ButtonStyle}"/>
+                    <Button Content="Шайхнуров" Width="100" Height="30"
+                            Command="{Binding GistogrammViewCommand}" Style="{StaticResource ButtonStyle}"/>
+                    <Button Content="Овчинников" Margin="60 0 0 0" Width="100" Height="30"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding EgorGistogrammViewCommand}"/>
+                    <Button Content="Романов" Margin="60 0 0 0" Width="100" Height="30"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding RomanovGistogrammViewCommand}"/>
+                    <Button Content="Уваровский" Margin="60 0 0 0" Width="100" Height="30"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding UvarovskiyGistogrammViewCommand}"/>
+                    <Button Content="Образцов" Margin="60 0 0 0" Width="100" Height="30"
+                            Style="{StaticResource ButtonStyle}"
+                            Command="{Binding ObraztsovGistogrammViewCommand}"/>
                 </StackPanel>
             </Border>
 

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Lab.MVVM.View.Ilnar
+namespace Lab.MVVM.View.Uvarovskiy
 {
     /// <summary>
-    /// Логика взаимодействия для IlnarView.xaml
+    /// Логика взаимодействия для UvarovskiyGistogrammView.xaml
     /// </summary>
-    public partial class IlnarView : UserControl
+    public partial class UvarovskiyGistogrammView : UserControl
     {
-        public IlnarView()
+        public UvarovskiyGistogrammView()
         {
             InitializeComponent();
         }

@@ -6,6 +6,14 @@
              xmlns:view="clr-namespace:Lab.MVVM.View"
              xmlns:viewModelIlnar="clr-namespace:Lab.MVVM.ViewModel.Ilnar"
              xmlns:viewIlnar="clr-namespace:Lab.MVVM.View.Ilnar"
+             xmlns:viewModelRomanov="clr-namespace:Lab.MVVM.ViewModel.Romanov"
+             xmlns:viewRomanov="clr-namespace:Lab.MVVM.View.Romanov"
+             xmlns:viewModelUvarovskiy="clr-namespace:Lab.MVVM.ViewModel.Uvarovskiy"
+             xmlns:viewUvarovskiy="clr-namespace:Lab.MVVM.View.Uvarovskiy"
+             xmlns:viewModelObraztsov="clr-namespace:Lab.MVVM.ViewModel.Obraztsov"
+             xmlns:viewObraztsov="clr-namespace:Lab.MVVM.View.Obraztsov"
+             xmlns:viewModelEgor="clr-namespace:Lab.MVVM.ViewModel.Egor"
+             xmlns:viewEgor="clr-namespace:Lab.MVVM.View.Egor"
              StartupUri="/MVVM/View/MainWindow.xaml">
     <Application.Resources>
 
@@ -18,13 +26,26 @@
                 <view:MainWindow/>
             </DataTemplate>
 
-            <DataTemplate DataType="{x:Type viewModelIlnar:IlnarViewModel}">
-                <viewIlnar:IlnarView/>
-            </DataTemplate>
-
             <DataTemplate DataType="{x:Type viewModelIlnar:GistogrammViewModel}">
                 <viewIlnar:GistogrammView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelRomanov:RomanovGistogrammViewModel}">
+                <viewRomanov:RomanovGistogrammView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelUvarovskiy:UvarovskiyGistogrammViewModel}">
+                <viewUvarovskiy:UvarovskiyGistogrammView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelObraztsov:ObraztsovGistogrammViewModel}">
+                <viewObraztsov:ObraztsovGistogrammView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelEgor:EgorGistogrammViewModel}">
+                <viewEgor:EgorGistogrammView/>
+            </DataTemplate>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
