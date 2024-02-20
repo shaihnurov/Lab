@@ -1,0 +1,30 @@
+﻿<Application x:Class="Lab.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Lab"
+             xmlns:viewModel="clr-namespace:Lab.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Lab.MVVM.View"
+             xmlns:viewModelIlnar="clr-namespace:Lab.MVVM.ViewModel.Ilnar"
+             xmlns:viewIlnar="clr-namespace:Lab.MVVM.View.Ilnar"
+             StartupUri="/MVVM/View/MainWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/Style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:MainViewModel}">
+                <view:MainWindow/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelIlnar:IlnarViewModel}">
+                <viewIlnar:IlnarView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModelIlnar:GistogrammViewModel}">
+                <viewIlnar:GistogrammView/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

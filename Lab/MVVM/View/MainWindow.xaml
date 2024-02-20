@@ -1,0 +1,47 @@
+﻿<Window x:Class="Lab.MVVM.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab"
+        xmlns:viewModel="clr-namespace:Lab.MVVM.ViewModel"
+        mc:Ignorable="d" Background="Transparent"
+        Title="" Height="750" Width="1200">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border Background="White">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Image Source="/Image/BackgroundVector.png" Margin="-534,-295,-589,-466" 
+                   Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+            <Border Grid.Row="0" Grid.Column="1" Panel.ZIndex="1"
+                    VerticalAlignment="Center" MinWidth="500">
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Content="Ilnar" Width="50" Height="30"
+                            Command="{Binding IlnarViewCommand}" Style="{StaticResource ButtonStyle}"/>
+                    <Button Content="Egor" Margin="100 0 0 0" Width="50" Height="30"
+                            Style="{StaticResource ButtonStyle}"/>
+                    <Button Content="Kolyan" Margin="100 0 0 0" Width="50" Height="30"
+                            Style="{StaticResource ButtonStyle}"/>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="1" Background="Transparent" Grid.Column="2">
+                <ContentControl Content="{Binding CurrentView}"/>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
