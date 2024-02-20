@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "KkzAT1LotCa1o9osj/Sox5Tal3Ibh1dQErWcqLTT1GGBB298U53Tj+L+6sn2ZLxNL+A/l7cd3nNX5I4lerY60w==",
+  "success": true,
+  "projectFilePath": "E:\\VisualStudio\\Lab\\Lab\\Lab\\Lab.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ильнар\\.nuget\\packages\\communitytoolkit.mvvm\\8.2.2\\communitytoolkit.mvvm.8.2.2.nupkg.sha512",
+    "C:\\Users\\Ильнар\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
+    "C:\\Users\\Ильнар\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Ильнар\\.nuget\\packages\\system.data.datasetextensions\\4.5.0\\system.data.datasetextensions.4.5.0.nupkg.sha512",
+    "C:\\Users\\Ильнар\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
